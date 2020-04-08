@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Button?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox prefHeight="45.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="FileLabel" prefHeight="20.0" prefWidth="534.0" text="File to be encrypted is :">
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="12.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" top="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <left>
+        <HBox prefHeight="103.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="17.0" prefWidth="89.0" text="Encrypted Key">
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="encryptedKey" prefHeight="27.0" prefWidth="151.0">
+                    <HBox.margin>
+                        <Insets top="15.0" />
+                    </HBox.margin>
+                </TextField>
+                <Region prefHeight="60.0" prefWidth="70.0" HBox.hgrow="ALWAYS" />
+                <Button mnemonicParsing="false" onAction="#encryptedButton" prefHeight="40.0" prefWidth="70.0" text="Encrypt" textFill="#e80b0b">
+                    <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#decryptedButton" prefHeight="40.0" prefWidth="70.0" text="Decrypt" textFill="#3a1fd3">
+                    <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </left>
+</BorderPane>
